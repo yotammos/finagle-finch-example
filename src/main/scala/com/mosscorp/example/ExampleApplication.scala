@@ -1,16 +1,16 @@
-package com.andrewjones
+package com.mosscorp.example
 
-import com.andrewjones.models.Message
-import com.andrewjones.services.ExampleService
+import com.mosscorp.example.models.Message
+import com.mosscorp.example.services.ExampleService
 import com.twitter.app.Flag
 import com.twitter.finagle.Http
 import com.twitter.server.TwitterServer
 import com.twitter.util.Await
 import com.twitter.util.logging.Logging
-import io.circe.generic.auto._
-import io.finch._
-import io.finch.syntax._
+import io.finch.syntax.{get, post}
+import io.finch.{Application, Endpoint, InternalServerError, Ok, jsonBody}
 import io.finch.circe._
+import io.circe.generic.auto._
 
 object ExampleApplication extends TwitterServer with Logging {
   private val port: Flag[Int] = flag("port", 8081, "TCP port for HTTP server")

@@ -1,6 +1,6 @@
-package com.andrewjones.services
+package com.mosscorp.example.services
 
-import com.andrewjones.models.Message
+import com.mosscorp.example.models.Message
 import com.twitter.util.Future
 
 class ExampleService {

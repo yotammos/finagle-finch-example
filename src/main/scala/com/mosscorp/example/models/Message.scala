@@ -1,3 +1,3 @@
-package com.andrewjones.models
+package com.mosscorp.example.models
 
 case class Message(message: String)

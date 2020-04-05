@@ -1,15 +1,15 @@
-package com.andrewjones
+package com.mosscorp.example
 
 import java.nio.charset.StandardCharsets
 
-import com.andrewjones.models.Message
+import com.mosscorp.example.models.Message
 import com.twitter.io.Buf
 import io.finch.{Application, Input}
 import org.scalatest.{FlatSpec, Matchers}
 
 class ExampleSpec extends FlatSpec with Matchers {
 
-  import ExampleApplication._
+  import com.mosscorp.example.ExampleApplication._
 
   behavior of "the hello endpoint"
 
